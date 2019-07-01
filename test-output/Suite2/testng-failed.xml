@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite2]" parallel="classes">
+  <test thread-count="2" name="bowling home page flow(failed)" parallel="classes">
+    <classes>
+      <class name="Common_testing_problems.Regression_checklist_birthday_flow">
+        <methods>
+          <include name="verify_search_location_page"/>
+          <include name="verify_select_package_page"/>
+          <include name="verify_select_party_time_popup"/>
+          <include name="launchdriver"/>
+          <include name="verify_search_location_fill_validation_and_navigation"/>
+          <include name="verify_birthday_navigation_functionality"/>
+          <include name="popupclose"/>
+          <include name="verify_config_package"/>
+        </methods>
+      </class> <!-- Common_testing_problems.Regression_checklist_birthday_flow -->
+    </classes>
+  </test> <!-- bowling home page flow(failed) -->
+</suite> <!-- Failed suite [Suite2] -->

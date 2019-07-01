@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "BowlingRegressionSuite" >
+   <test name = "Test1">
+      <classes>
+         <class name = "mainEvent.Run.BowlingFlowTC_01" />
+      </classes>
+   </test>
+  <test name = "Test2">
+      <classes>
+         <class name = "mainEvent.Run.BirthdayFlowTC_02" />
+      </classes>
+   </test>
+    <test name = "Test3">
+      <classes>
+         <class name = "mainEvent.Run.BirthdayFlowTC_03" />
+      </classes>
+   </test>
+    <test name = "Test4">
+      <classes>
+         <class name = "mainEvent.Run.BirthdayFlowTC_04" />
+      </classes>
+   </test>
+     <test name = "Test5">
+      <classes>
+         <class name = "mainEvent.Run.BirthdayFlowTC_05" />
+      </classes>
+   </test>
+     <test name = "Test6">
+      <classes>
+         <class name = "mainEvent.Run.BirthdayFlowTC_06" />
+      </classes>
+   </test>
+     <test name = "Test7">
+      <classes>
+         <class name = "mainEvent.Run.BirthdayFlowTC_07" />
+      </classes>
+   </test>
+</suite>  

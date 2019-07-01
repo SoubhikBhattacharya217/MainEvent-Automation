@@ -1,0 +1,8 @@
+<suite name="ClearTrip Test Suite">
+	<test name = "ClearTrip Automation Test">
+		<classes>
+			<class>CleartripTestNG</class>
+
+		</classes>
+	</test>
+</suite>

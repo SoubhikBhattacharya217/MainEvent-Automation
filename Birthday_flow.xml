@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite1" verbose="1" >
+  <test name="Nopackage" >
+    <classes>
+       <class name="test_automation_login.org.CognizantQA.MErun.Birthday_booking_landingpage_validations_production">
+         <methods>
+  <include name="launchdriver" />
+  <include name="verifypopupclose"/>
+  <include name="verify_birthday_book_bttn"/>
+  </methods>
+       </class>  
+    <class name="test_automation_login.org.CognizantQA.MErun.Birthday_booking_flow_production">
+       <methods>
+  <include name="verifybook_birthday_page_by_click" />
+  <include name="verifystorepopup_close"/>
+  <include name="verifybday_page_by_keyboard"/>
+  </methods>
+    </class>
+    </classes>
+  </test>
+ 
+</suite>

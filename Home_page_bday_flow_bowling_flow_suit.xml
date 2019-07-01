@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite2" parallel="classes" thread-count="2" >
+  <test name="bowling home page flow" >
+  
+    <classes>
+       <class name="Common_testing_problems.Regression_checklist_UAT"/>
+       <class name="Common_testing_problems.Regression_checklist_birthday_flow"/>
+    </classes>
+  </test>
+</suite>

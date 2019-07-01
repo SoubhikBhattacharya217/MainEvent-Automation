@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [birthdayRegressionSuite]">
+  <test thread-count="5" name="Test4(failed)">
+    <classes>
+      <class name="mainEvent.Run.BirthdayFlowTC_04">
+        <methods>
+          <include name="verifySearchLocationFillValidationAndNavigation"/>
+          <include name="verifySearchLocationPage"/>
+          <include name="getResult"/>
+          <include name="beforeClass"/>
+          <include name="launchdriver"/>
+          <include name="verifyGuestCountPopup"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- mainEvent.Run.BirthdayFlowTC_04 -->
+    </classes>
+  </test> <!-- Test4(failed) -->
+</suite> <!-- Failed suite [birthdayRegressionSuite] -->

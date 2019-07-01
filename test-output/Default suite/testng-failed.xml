@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="mainEvent.Run.BowlingFlowTC_10">
+        <methods>
+          <include name="verifySearchLocationFillValidationAndNavigation"/>
+          <include name="beforeClass"/>
+          <include name="OrderSummaryPageNavigationValidation"/>
+          <include name="SelectTimePageValidations"/>
+          <include name="getResult"/>
+          <include name="launchdriver"/>
+          <include name="LocationSearchFunctionalityValidations"/>
+          <include name="endReport"/>
+          <include name="verifyDetailsOnCartPage"/>
+        </methods>
+      </class> <!-- mainEvent.Run.BowlingFlowTC_10 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
