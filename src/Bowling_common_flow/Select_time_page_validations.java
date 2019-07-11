@@ -94,7 +94,27 @@ public class Select_time_page_validations {
 		  wait.until(ExpectedConditions.visibilityOfElementLocated(Elements.xdate_slct2));
 		  wait.until(ExpectedConditions.visibilityOfElementLocated(Elements.xclose_bttn));
 		  driver.findElement(Elements.xclose_bttn).click();*/
-		  //ec.eWrite(66, 11, "pass");
+		  //ec.eWrite(66, 11, "pass");	  
+		  try {
+			  driver.findElement(Elements.xslctdate).click();
+			 // wait.until(ExpectedConditions.visibilityOfElementLocated(Elements.xtoday_bttn_calender));
+			  Thread.sleep(1500);
+			  //ec.eWrite(59, 11, "pass");
+			  driver.findElement(Elements.xtoday_bttn_calender).click();
+			  logger.log(LogStatus.PASS, "today button in calender pop up is clickable");
+			  new Actions(driver).moveByOffset(30, 10).click().build().perform(); 
+			  Thread.sleep(2000);
+			  }
+			  catch(Exception e) {
+				  driver.navigate().refresh();
+				  Thread.sleep(4000);
+				  driver.findElement(Elements.xslctdate).click();
+				 // wait.until(ExpectedConditions.visibilityOfElementLocated(Elements.xtoday_bttn_calender));
+				  Thread.sleep(1500);
+				  //ec.eWrite(59, 11, "pass");
+				  driver.findElement(Elements.xtoday_bttn_calender).click();
+				  logger.log(LogStatus.PASS, "today button in calender pop up is clickable");
+			  }	  
 		  result=driver.findElement(Elements.xse_av_times_bttn).isEnabled();   
 		  try {
 			 
@@ -298,25 +318,6 @@ public class Select_time_page_validations {
 				driver.findElement(Elements.xlane_count2).click();
 				
 				
-				 try {
-					  driver.findElement(Elements.xslctdate).click();
-					 // wait.until(ExpectedConditions.visibilityOfElementLocated(Elements.xtoday_bttn_calender));
-					  Thread.sleep(1500);
-					  //ec.eWrite(59, 11, "pass");
-					  driver.findElement(Elements.xtoday_bttn_calender).click();
-					  logger.log(LogStatus.PASS, "today button in calender pop up is clickable");
-					  new Actions(driver).moveByOffset(230, 200).click().build().perform(); 
-					  }
-					  catch(Exception e) {
-						  driver.navigate().refresh();
-						  Thread.sleep(4000);
-						  driver.findElement(Elements.xslctdate).click();
-						 // wait.until(ExpectedConditions.visibilityOfElementLocated(Elements.xtoday_bttn_calender));
-						  Thread.sleep(1500);
-						  //ec.eWrite(59, 11, "pass");
-						  driver.findElement(Elements.xtoday_bttn_calender).click();
-						  logger.log(LogStatus.PASS, "today button in calender pop up is clickable");
-					  }
 				
 				
 				
@@ -338,6 +339,8 @@ public class Select_time_page_validations {
 		 
 				 try  {
 					 int m=0;
+					 WebDriverWait wait=new WebDriverWait(driver, 60);
+					 wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Elements.xslct_your_party_time_popup_text));
 				     for(int i=1;i<=38;i++)
 				      {
 					      result=driver.findElement(By.xpath("//*[@id='storeTimeModal']//form//div/ul/li["+i+"]/input")).isEnabled();

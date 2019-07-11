@@ -114,15 +114,7 @@ public class Elements extends POMabstract {
     public static final By xemail_checkout=By.cssSelector("#emailField");//email field in checkout page
     public static final By xph_no_checkout=By.cssSelector("#phone-field");//phone number field in checkout page
     public static final By xgo_to_payment_bttn=By.xpath("(/html/body//div/form/div/div[5]//div/input)[2]");
-    public static final By xmake_payment_bttn=By.cssSelector("#payonline > div.ng-scope > form > div.col-xs-12.col-sm-6.col-md-offset-4.text-center.col-md-4.margin-bottom-15.hidden-xs > input");//make payment button make payment page
-    public static final By xnamefield_card=By.cssSelector("#firstname");//payment page
-    public static final By xcard_no=By.cssSelector("#cardNo");//payment page
-    public static final By xexpiry_month1=By.cssSelector("#payonline > div.ng-scope > form > div:nth-child(1) > div > div > div:nth-child(3) > div > div > div:nth-child(1) > dropdowncustom > div > div > input");//payment page
-    public static final By xexpiry_month2=By.xpath("(//*[@id=\"payonline\"]/div[4]/form//div/dropdowncustom//div)[12]");//payment page	
-    public static final By xexpiry_year1=By.cssSelector("#payonline > div.ng-scope > form > div:nth-child(1) > div > div > div:nth-child(3) > div > div > div:nth-child(2) > dropdowncustom > div > div > input");//payment page
-    public static final By xexpiry_year2=By.xpath("(//*[@id=\"payonline\"]/div[4]/form//div/dropdowncustom//div)[21]");//payment page
-    public static final By xCVV=By.cssSelector("#cvvNo");//payment page
-    public static final By xtotal_amount_make_payment_page=By.xpath("(//div[@class='col-xs-12 col-sm-3 pull-right actualpayableamount tobepaid ng-binding'])[1]");//payment page
+    
     
     //6th sept,2018 
     //*****************************************************************************************************************************************************************
@@ -295,7 +287,7 @@ public class Elements extends POMabstract {
     public static final By xterms_and_conditions_party_ordersummary=By.xpath("(//label[@class='agreeTerms'])[1]");
     //public static final By xcrossbttn_slct_your_party_time=By.xpath("//*[@id='storeTimeModal']/div/button");
     //public static final By xcrossbttn_slct_your_party_time=By.xpath("//*[@id='storeTimeModal']/div/button");
-    
+    public static final By xslct_your_party_time_popup_text=By.xpath("//h2[starts-with(text(),'SELECT YOUR BOWLING TIME')]");
     
     //cart page for Birthday Booking Flow
     public static final By xpkg_and_guest_details=By.xpath("(//span[@class='store-name'])");
@@ -452,4 +444,27 @@ public class Elements extends POMabstract {
     public static final By xstatic_google_map=By.xpath("//img[@alt='Google Map']");
     public static final By xseelct_store_button_in_dynamic_map=By.xpath("//input[@value='SELECT STORE']");
     public static final By xRTE_text=By.xpath("//div[@class='marquee ng-binding']");
+    //8th july Payment page
+    public static final By xmake_payment_bttn=By.xpath("(//input[@value='MAKE PAYMENT'])[1]");//make payment button make payment page
+    public static final By xnamefield_card=By.cssSelector("#firstname");//payment page
+    public static final By xcard_no=By.cssSelector("#cardNo");//payment page
+    public static final By xexpiry_month1=By.xpath("(//label[@class='control-label'])[9]");//payment page
+    public static final By xexpiry_month2=By.xpath("(//*[@id='payonline']/div[4]/form//div/dropdowncustom//div)[12]");//payment page	
+    public static final By xexpiry_year1=By.xpath("(//label[@class='control-label'])[10]");//payment page
+    public static final By xexpiry_year2=By.xpath("(//*[@id='payonline']/div[4]/form//div/dropdowncustom//div)[21]");//payment page
+    public static final By xCVV=By.cssSelector("#cvvNo");//payment page
+    public static final By xtotal_amount_make_payment_page=By.xpath("(//div[@class='col-xs-12 col-sm-3 pull-right actualpayableamount tobepaid ng-binding'])[1]");//payment page
+    public static final By xzipcode=By.cssSelector("#zipcode");//payment page
+    
+    //8th july 2019 , OrderConfermation Page
+    public static final By xAll_pkg_details=By.xpath("//span[@class='order-details-span ng-binding']");
+    public static final By xtotalamount_details=By.xpath("(//div[@class='col-md-6 col-lg-6 col-xs-6 padding-0 ng-binding'])[1]");
+    public static final By xstorelocation_details=By.xpath("(//div[@class='ng-binding'])[3]");
+    public static final By xbday_dueamount_details=By.xpath("(//div[@class='col-xs-5 col-md-2 col-lg-2 conf-total-price payment-subbig text-right ng-binding'])[2]");
+    public static final By xbday_SENDA_Invitation_details=By.xpath("(//input[@value='SEND E-INVITATION'])[1]");
+    public static final By xGobackhomeBttn_details=By.xpath("(//a[text()='Go back home'])[1]");
+    public static final By xDoAnotherBooking__details=By.xpath("(//a[text()='Do another booking'])[1]");
+    
+    
+    
 }

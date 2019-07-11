@@ -3,19 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mainEvent.Run.BowlingFlowTC_10">
+      <class name="mainEvent.Run.BowlingFlowTC_14">
         <methods>
-          <include name="verifySearchLocationFillValidationAndNavigation"/>
           <include name="beforeClass"/>
-          <include name="OrderSummaryPageNavigationValidation"/>
-          <include name="SelectTimePageValidations"/>
           <include name="getResult"/>
           <include name="launchdriver"/>
+          <include name="verifyPaymentPage_Go_back_home_button"/>
           <include name="LocationSearchFunctionalityValidations"/>
           <include name="endReport"/>
-          <include name="verifyDetailsOnCartPage"/>
+          <include name="SelectTimePageValidations"/>
         </methods>
-      </class> <!-- mainEvent.Run.BowlingFlowTC_10 -->
+      </class> <!-- mainEvent.Run.BowlingFlowTC_14 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

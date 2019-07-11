@@ -57,6 +57,7 @@ public class Location_search_functionality_validations {
 	    	  ss.takeScreenShot(driver, "issue");
 	      }
 	      Assert.assertTrue(result);
+	      Thread.sleep(2500);
 	      result=driver.findElement(Elements.xfind_a_mainevent_bttn1).isDisplayed();
 	      if(result==false)
 	      {

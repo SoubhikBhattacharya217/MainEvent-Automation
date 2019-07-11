@@ -13,6 +13,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 import Bowling_common_flow.Bowling_failure_screen_shot;
 
 public class Confirmation_page_validations {
@@ -20,16 +24,27 @@ public class Confirmation_page_validations {
 	static DataConfig data;
 	static JavascriptExecutor js;
 	static boolean result=false;
+	static ExtentReports report;
+	static ExtentTest logger;
 	static Bowling_failure_screen_shot ss=new Bowling_failure_screen_shot();
-	public static void verify_confirmation_page(WebDriver driver) throws InterruptedException, IOException {
+	public static void verify_confirmation_page(WebDriver driver , ExtentTest logger) throws InterruptedException, IOException {
 		  WebDriverWait wait=new WebDriverWait(driver, 60);
-		  wait.until(ExpectedConditions.urlToBe("https://mepreprod.cognizantorderserv.com/checkout/confirmation"));
-		  result=Verify.Compare.verifyURL(driver, "https://mepreprod.cognizantorderserv.com/checkout/confirmation");
-		  if(result==false)
-	      {
-	    	  Thread.sleep(2000);
-	    	  ss.takeScreenShot(driver, "confirmation page not successfully navigated");
-	      }
+		  try {
+		  wait.until(ExpectedConditions.urlToBe("https://mainevent.cognizantorderserv.com/checkout/confirmation"));	
+		  result=Verify.Compare.verifyURL(driver, "https://mainevent.cognizantorderserv.com/checkout/confirmation");
 		  Assert.assertTrue(result);
+		  logger.log(LogStatus.PASS, "User is successfully navigated to the Order Confirmation Page in UAT environment");
+		  }
+		  catch(Exception e) {
+			  try {
+			  result=Verify.Compare.verifyURL(driver, "https://www.mainevent.com/checkout/confirmation");
+			  Assert.assertTrue(result);
+			  logger.log(LogStatus.PASS, "User is successfully navigated to the Order Confirmation Page in Production environment");
+			  }
+			  catch(Exception e1) {
+				  logger.log(LogStatus.FAIL, "User is successfully navigated to the Order Confirmation Page in UAT environment");
+				  logger.log(LogStatus.FAIL, "User is successfully navigated to the Order Confirmation Page in Production environment");
+			  }
+		  }
 	  }
 }

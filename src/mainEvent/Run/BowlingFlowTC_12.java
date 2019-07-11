@@ -1,7 +1,5 @@
 package mainEvent.Run;
 
-import org.CognizantQA.PageObject.Elements;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -18,12 +16,13 @@ import Bowling_common_flow.Location_search_functionality_validations;
 import Bowling_common_flow.Order_summary_page_details_and_change_bttn_validations;
 import Bowling_common_flow.Order_summary_page_navigation_validation;
 import Bowling_common_flow.Select_time_page_validations;
-import Common_flow.Cart_page_modify_and_delete_button_validation;
 import Common_flow.Checkout_register_page_validations;
+import Common_flow.Confirmation_page_validations;
+import Common_flow.Payment_page_validations;
 import Common_flow.PopupClose;
 import Common_flow.Select_a_mainevent_store_popup_validations;
 
-public class BowlingFlowTC_11 extends baseClass {
+public class BowlingFlowTC_12 extends baseClass{
 	PopupClose popupClose = new PopupClose();
 	Bowling_reserve_bttn BowlingReserveBttn=new Bowling_reserve_bttn();
 	Find_a_lane_page_heading_validations FindALanePageHeadingValidations=new Find_a_lane_page_heading_validations();
@@ -33,6 +32,8 @@ public class BowlingFlowTC_11 extends baseClass {
 	Order_summary_page_navigation_validation OrderSummaryPageNavigationValidation=new Order_summary_page_navigation_validation();
 	Order_summary_page_details_and_change_bttn_validations OrderSummaryValidations=new Order_summary_page_details_and_change_bttn_validations();
 	Checkout_register_page_validations crpv=new Checkout_register_page_validations();
+	Payment_page_validations ppv=new Payment_page_validations();
+	Confirmation_page_validations cpv=new Confirmation_page_validations();
 	static ExtentReports extentReport;
 	static ExtentTest logger;
 	@BeforeClass
@@ -43,7 +44,7 @@ public class BowlingFlowTC_11 extends baseClass {
 	@Test(priority=1)
 	public void popupClose()
 	{
-		logger = extentReport.startTest("BowlingPageFlowTC_11 : Validate multiple fields in checkout page and PAYMENT button functionality ");
+		logger = extentReport.startTest("BowlingPageFlowTC_12 : Validate multiple fields in PAYMENT page and MAKE PAYMENT button functionality ");
 		popupClose.verifypopupclose(driver,logger);
 		
 	}
@@ -87,6 +88,13 @@ public class BowlingFlowTC_11 extends baseClass {
 	{
 		
 		crpv.verify_register_page(driver, logger);
+	}
+	@Test(priority=8)
+	public void verifyPaymentPage() throws Exception
+	{
+		
+		ppv.verify_payment_page(driver, logger);
+		cpv.verify_confirmation_page(driver, logger);
 	}
 	
 	@AfterMethod

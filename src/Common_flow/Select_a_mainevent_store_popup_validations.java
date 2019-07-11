@@ -68,13 +68,15 @@ public class Select_a_mainevent_store_popup_validations {
 		//driver.switchTo().frame("storeModalContent");
 		WebDriverWait wait1=new WebDriverWait(driver,5);
 		try {	
-			wait1.until(ExpectedConditions.visibilityOfElementLocated(Elements.xfind_a_mainevent_bttn1));
+			Thread.sleep(4000);
+			wait1.until(ExpectedConditions.visibilityOfElementLocated(Elements.xfind_a_mainevent_bttn1)).click();
+			
 			/*driver.findElement(Elements.xcity_field).clear();
 			Thread.sleep(2000);
 			driver.findElement(Elements.xcity_field).sendKeys(data.getData(1, 19, 1));
      		driver.findElement(Elements.xcity_field).click();
 			driver.findElement(Elements.xexternalclickfindpage1).click();*/
-			driver.findElement(Elements.xfind_a_mainevent_bttn1).click();
+			//driver.findElement(Elements.xfind_a_mainevent_bttn1).click();
 		}
 		catch(Exception e) {
 			System.out.println("user is not sitauted in the bowling flow select main event pop up");

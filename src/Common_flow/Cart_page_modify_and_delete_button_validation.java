@@ -203,7 +203,6 @@ public class Cart_page_modify_and_delete_button_validation {
 		else {////////////////////////////////////////////////////////////////////////////////////
 			try {
 				result=Verify.Compare.verifyURL(driver, "https://www.mainevent.com/checkout/cart");
-
 				logger.log(LogStatus.PASS, "User has successfully navigated to the CART page");
 				//ec.eLaunch(a, 0);
 				//ec.eWrite(190, 11, "Pass");

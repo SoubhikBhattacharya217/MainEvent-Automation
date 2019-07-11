@@ -26,18 +26,28 @@ public class PopupClose {
 	{
 		try 
 		{
-
 			WebDriverWait wait=new WebDriverWait(driver,30);
+			try {
 			wait.until(ExpectedConditions.elementToBeClickable(Elements.xproductionpopupclose));
 			result=driver.findElement(Elements.xproductionpopupclose).isDisplayed();
 			Assert.assertTrue(result);
 			result=driver.findElement(Elements.xproductionpopupclose).isEnabled();
 			Assert.assertTrue(result);
 			driver.findElement(Elements.xproductionpopupclose).click();
+			logger.log(LogStatus.PASS, "location pop up appearedand dealt with");
+			}
+			catch(Exception e) {
+				logger.log(LogStatus.SKIP, "location pop up did not appeared");
+			}
+			try {
 			wait.until(ExpectedConditions.elementToBeClickable(Elements.xbook_online_notify_close_bttn));
 			driver.findElement(Elements.xbook_online_notify_close_bttn).click();
 			((JavascriptExecutor)driver).executeScript("scroll(0,400)");
 			logger.log(LogStatus.PASS, "pop up closed successfully");
+			}
+			catch(Exception e) {
+				logger.log(LogStatus.SKIP, "pop up closed successfully");
+			}
 			return true;
 		}
 		catch(Exception e)
